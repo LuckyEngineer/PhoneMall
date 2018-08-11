@@ -1,0 +1,280 @@
+
+*{
+    margin:0;
+    padding:0;
+    font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", "微軟正黑體", "儷黑 Pro", sans-serif;
+
+}
+a{
+    text-decoration: none;
+}
+body{
+    min-width:1226px;
+}
+.header{
+    width:100%;
+    height:98px;
+}
+.h_panel{
+    width:1130px;
+    height:98px;
+    margin:auto;
+
+}
+.h_logo{
+    width:200px;
+    height:98px;
+}
+.h_logo img{
+    width:100%;
+    height:100%;
+}
+.wrap{
+    width:100%;
+    height:588px;
+    background:url(../images/login/login-background.jpg) no-repeat;
+    background-position-x:center;
+    background-position-y:top ;
+}
+.layout_panel{
+    width:1130px;
+    height:588px;
+    margin:auto;
+
+}
+.wrap .layout_panel .login-main{
+    width:410px;
+    height:524px;
+    float:right;
+    margin-top:30px;
+    position:relative;
+    background-color: white;
+}
+.login-type-box{
+    width:410px;
+    height:83px;
+    box-sizing: border-box;
+    padding:27px 0 24px;
+}
+.login-type-box .list {
+    margin-left: 59px;
+    list-style: none;
+}
+.login-type-box .list li{
+    width:110px;
+    height:32px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 32px;
+    float:left;
+}
+.list .l_account a{
+    color:#f56600;
+}
+.login-type-box .list .link{
+    width:70px;
+    font-size: 30px;
+    line-height: 25px;
+    color:#e0e0e0;
+}
+.l_qrcode{
+    position:relative;
+}
+.l_qrcode a{
+    color:#757575;
+}
+.l_q_qrcode{
+    width:410px;
+    height:315px;
+    background-color: white;
+    box-sizing: border-box;
+    padding-top: 100px;
+    position: absolute;
+    right:-61px;
+    top:32px;
+    z-index: 10;
+    display: none;
+}
+.l_q_qrcode img{
+    display: block;
+    width:181px;
+    height:181px;
+    margin:0 auto;
+}
+.l_q_qrcode p{
+    width: 410px;
+    margin-top:14px;
+    font-size:14px;
+    color:#757575;
+    line-height: 22px;
+    text-align: center;
+}
+.l_q_qrcode span{
+    color:#ff6700;
+}
+.l_qrcode:hover a{
+    color:#f56600;
+}
+.l_qrcode:hover .l_q_qrcode{
+    display: block;
+}
+/*注册框中部*/
+form{
+    width:410px;
+    height:227px;
+    margin:auto
+}
+.login-box{
+    width:348px;
+    height:227px;
+    margin:0 auto;
+}
+.login-box input{
+    width:346px;
+    height:48px;
+    font-size: 14px;
+    outline:none;
+    border:1px solid #e0e0e0;
+}
+.account{
+    box-sizing: border-box;
+    padding-left: 12px;
+}
+.password{
+    margin-top:15px;
+    box-sizing: border-box;
+    padding-left: 12px;
+}
+.button{
+    margin-top: 25px;
+    background-color: #ef5b00;
+    color:#ffffff;
+    border:transparent;
+}
+/*表单尾部*/
+.other{
+    height:20px;
+    margin-top:8px;
+}
+.other1{
+    width:116px;
+    height:20px;
+    float:left;
+    font-size:14px;
+
+}
+.other1 a{
+    color:#ef5b00;
+}
+.other2{
+    height:20px;
+    float:right;
+    font-size:14px;
+    list-style: none;
+}
+.other2 li{
+    width:65px;
+    height:20px;
+    text-align: center;
+    float:left;
+}
+.other2 .o_register{
+    width:60px;
+}
+.other2 .o_link{
+    width:20px;
+    text-align: center;
+    line-height: 20px;
+    color:#757575;
+}
+.other2 a{
+    color:#757575;
+}
+.type-login{
+    height:30px;
+    margin-top: 120px;
+    text-align: center;
+    color:#757575;
+}
+
+.l-links{
+    width:280px;
+    height:30px;
+    margin:0 auto;
+    list-style: none;
+}
+.l-links li{
+    float:left;
+    width:65px;
+    height:30px;
+    text-align: center;
+    line-height: 50px;
+}
+.l-links i{
+    font-size: 30px;
+    color:#757575;
+}
+.l-links .icon-logo-wechat{
+    font-size: 36px;
+}
+.icon-qq:hover{
+    color:#0288d1;
+}
+.icon-qunfengxinlangweibo:hover{
+    color:#d32f2f;
+}
+.icon-zhifubao:hover{
+    color:#00aaee;
+}
+.icon-logo-wechat:hover{
+    color:#00d20d;
+}
+.footer{
+    width:100%;
+    height:80px;
+    margin-top: 100px;
+}
+.select{
+    width:1130px;
+    height:80px;
+    margin:0 auto;
+    font-size: 14px;
+}
+.select ul{
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 370px;
+    list-style: none;
+}
+.select ul li {
+    display:inline-block;
+    list-style:none;
+}
+.select ul a{
+    text-decoration: none;
+    color:#757575;
+}
+.list .link{
+    display: inline-block;
+    width:20px;
+    text-align: center;
+    line-height: 10px;
+    color:#757575;
+}
+.list .simple{
+    color:#333333;
+}
+.introduce{
+    width:100%;
+    height:44px;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+.introduce a{
+    color:#757575;
+}
+.introduce p{
+    text-align: center;
+    line-height: 34px;
+    color:#757575;
+}
