@@ -22,9 +22,10 @@ a{
 }
 .layout{
     width:854px;
-    height:559px;
+    height:760px;
     /*border:1px solid red;*/
     position:relative;
+
 }
 .register-box{
     width:786px;
@@ -76,11 +77,11 @@ a{
     height:20px;
     line-height: 14px;
 }
-.regbox .print{
-    width:100%;
-    height:60px;
-    line-height: 60px;
-    color:#ff6700;
+
+#printID{
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
 }
 .regbox .explain{
     height:37px;
@@ -121,13 +122,159 @@ a{
 .phonenumber input{
     width:273px;
     height:42px;
-    border:1px solid #ff6700;
+    border:1px solid #e8e8e8;
+    /* border: 1px solid #ff6700; */
     position: absolute;
     right:0;
     box-sizing: border-box;
     padding-left: 10px;
     outline: none;
 }
+
+/*图标的设置*/
+.psw-img{
+    display: inline-block;
+    height: 40px;
+    width: 39px;
+    line-height: 40px;
+    text-align: center;
+    border: .5px solid #e8e8e8;
+}
+
+/*用户名*/
+.username{
+    /*background-color: #00E8D7;*/
+    width: 332px;
+    height: 42px;
+    /*border: 1px solid #e8e8e8;*/
+}
+#username{
+    display: inline-block;
+    float:right;
+    width: 290px;
+    height: 40px;
+    border: 1px solid #e8e8e8;
+}
+#user-text{
+    width: 100%;
+    line-height: 25px;
+    color: #ff6700;
+}
+
+
+
+/* 注册密码*/
+.password{
+    /*background-color: #00E8D7;*/
+    width: 332px;
+    height: 42px;
+    /*border: 1px solid #e8e8e8;*/
+}
+#psw-text{
+    display: inline-block;
+    float:right;
+    width: 290px;
+    height: 40px;
+    border: 1px solid #e8e8e8;
+}
+#print_psw{
+    width: 100%;
+    line-height: 25px;
+    color: #ff6700;
+}
+
+/* 确定密码*/
+.p-t-text{
+    /*background-color: #00E8D7;*/
+    width: 332px;
+    height: 42px;
+    /*border: 1px solid #e8e8e8;*/
+}
+#p-t-text{
+    display: inline-block;
+    float:right;
+    width: 290px;
+    height: 40px;
+    border: 1px solid #e8e8e8;
+}
+#print-t-text{
+    width: 100%;
+    line-height: 25px;
+    color: #ff6700;
+}
+
+
+
+
+/*邮箱*/
+.email{
+    /*background-color: #00E8D7;*/
+    width: 332px;
+    height: 42px;
+    /*border: 1px solid #e8e8e8;*/
+}
+#email{
+    display: inline-block;
+    float:right;
+    width: 290px;
+    height: 40px;
+    border: 1px solid #e8e8e8;
+}
+#email-text{
+    width: 100%;
+    line-height: 25px;
+    color: #ff6700;
+}
+
+/*问题*/
+.problem{
+    /*background-color: #00E8D7;*/
+    width: 332px;
+    height: 42px;
+    /*border: 1px solid #e8e8e8;*/
+}
+#problem{
+    display: inline-block;
+    float:right;
+    width: 290px;
+    height: 40px;
+    border: 1px solid #e8e8e8;
+}
+#problem-text{
+    width: 100%;
+    line-height: 25px;
+    color: #ff6700;
+}
+
+
+/*答案*/
+.answer{
+    /*background-color: #00E8D7;*/
+    width: 332px;
+    height: 42px;
+    /*border: 1px solid #e8e8e8;*/
+}
+#answer{
+    display: inline-block;
+    float:right;
+    width: 290px;
+    height: 40px;
+    border: 1px solid #e8e8e8;
+}
+#answer-text{
+    width: 100%;
+    line-height: 25px;
+    color: #ff6700;
+}
+
+
+
+
+
+
+
+
+
 .button{
     display:block;
     width:330px;
@@ -136,6 +283,7 @@ a{
     color:#ffffff;
     font-size:14px;
     border:0;
+    margin-top: 20px;
 }
 .button:hover{
     background-color: #ff936a;
@@ -144,8 +292,9 @@ a{
     width:786px;
     height:150px;
     box-sizing: border-box;
-    padding-top: 100px;
+    padding-top: 305px;
     color:#9d9d9d;
+
 }
 .privary_box a{
     color: #333333;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>小米账号注册</title>
     <link rel="stylesheet" type="text/css" href="css/register.css">
+    <link rel="stylesheet" type="text/css" href="iconfont/register/iconfont.css">
 </head>
 <body>
 <div class="wrapper">
@@ -19,26 +20,58 @@
                 <div class="register-list">
                     <form action="" method="post">
                         <div class="regbox">
-                            <p>国家/地区</p>
-                            <div class="country-box">
-                                <select class="country-select">
-                                    <option value="1">中国</option>
-                                    <option value="2">美国</option>
-                                    <option value="3">日本</option>
-                                </select>
+
+                            <!--用户名--->
+                            <div class="username">
+                                <div class="psw-img"><i class="iconfont icon-yonghu"></i></div><input type="text" id="username" placeholder="请输入用户名" onBlur="checkUserName()" oninput="checkUserName()"/>
                             </div>
-                            <p class="explain">成功注册帐号后，国家/地区将不能被修改</p>
-                            <p>手机号码</p>
+                            <p id="user-text"></p>
+
+
+                            <!--这里插入密码设置-->
+                            <div class="password">
+                                <div class="psw-img"><i class="iconfont icon-mima "></i></div><input type="text" id="psw-text" placeholder="请输入密码" onBlur="checkPassword()" oninput="checkPassword()"/>
+                            </div>
+                            <p id="print_psw"></p>
+
+                            <!--这里再次确定密码-->
+                            <div class="p-t-text">
+                                <div class="psw-img"><i class="iconfont icon-mima "></i></div><input type="text" id="p-t-text" placeholder="请再次输入密码" onBlur="turePassword()" oninput="turePassword()"/>
+                            </div>
+                            <p id="print-t-text"></p>
+
+                            <!---输入电话号码--->
                             <div class="phonenumber">
                                 <select class="phonenumber-select">
                                     <option>+86</option>
                                     <option>+886</option>
                                     <option>+852</option>
                                 </select>
-                                <input type="text" class="phonenumber-text-box" placeholder="请输入手机号码"/>
+                                <input type="text" class="phonenumber-text-box" id="p-t-bID" placeholder="请输入手机号码" onblur="checkPhone()" oninput="checkPhone()"/>
                             </div>
-                            <p class="print">请输入手机号码</p>
+                            <p class="print" id="printID"></p>
+
+                            <!--邮箱-->
+                            <div class="email">
+                                <div class="psw-img"><i class="iconfont icon-youxiang "></i></div><input type="text" id="email" placeholder="请输入邮箱" onBlur="checkEmail()" oninput="checkEmail()"/>
+                            </div>
+                            <p id="email-text"></p>
+
+                            <!--问题-->
+                            <div class="problem">
+                                <div class="psw-img"><i class="iconfont icon-wenhao"></i></div><input type="text" id="problem" placeholder="找回密码的问题" onBlur="checkProblem()" oninput="checkProblem()"/>
+                            </div>
+                            <p id="problem-text"></p>
+
+                            <!--答案-->
+                            <div class="answer">
+                                <div class="psw-img"><i class="iconfont icon-yaochi"></i></div><input type="text" id="answer" placeholder="确定问题的答案" onBlur="checkAnswer()" oninput="checkAnswer()"/>
+                            </div>
+                            <p id="answer-text"></p>
+
+                            <!--确定立刻注册-->
                             <input class="button" type="submit" value="立即注册"/>
+
                         </div>
                     </form>
                     <div class="privary_box">
@@ -78,5 +111,8 @@
         </div>
     </div>
 </div>
+<script type="application/javascript" src="js/jquery-3.3.1.min.js"></script>
+<!----->
+<script type="text/javascript" src="js/register.js"></script>
 </body>
 </html>
