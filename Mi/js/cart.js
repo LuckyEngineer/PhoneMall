@@ -12,6 +12,7 @@ $(function(){
     })();
     // End top
 
+
     // content_centre7
     // 结算div距离顶部的高度
     var position = $(".content_centre7").offset().top;
@@ -40,6 +41,13 @@ $(function(){
     })();
     // End content_centre7
 
+
+
+    // 鼠标点击复选框
+    // (function(){
+    //
+    // })();
+
     // 点击复选框，修改商品数量和价格统计
     (function(){
         var $check_all = $("#selall");// 全选框
@@ -49,6 +57,9 @@ $(function(){
         var $oneprice = $(".content_subtotal");// 小计
         var $totalprice = $(".totalprice");// 总价
         var $inputnum = $(".content .content_goods .c_g_num");// 商品数量输入框
+
+        var $remove=$(".close");//删除商品
+
         // 临时变量
         var temp = 1;
         // var flag = 0;
@@ -159,6 +170,33 @@ $(function(){
             }
 
         });
+
+        //删除商品
+        $(document).ready(function(){
+            $remove.click(function(){
+                var sumr=0;
+                var father=$(this).parent();//获得商品所有的信息
+                var num=father.find(".c_g_num").val();//商品数量
+                var price= father.find(".content_price").text();//商品单价
+                var sum=num*parseInt(price);//总价
+                if(!father.hasClass(".checkbox_selected")){
+
+                    father.remove();
+                }
+            });
+        });
+
+        // 计算总价
+        // function  calPrice(){
+        //     // 计算所有小计之和
+        //     var money = 0;
+        //     $oneprice.each(function(){
+        //         money += parseInt($(this).text());
+        //     });
+        //     $totalprice.html(money);
+        // }
+
+
 
         // 动态计算总价
         function calPrice(){

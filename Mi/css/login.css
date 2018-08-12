@@ -68,7 +68,11 @@ body{
     line-height: 32px;
     float:left;
 }
-.list .l_account a{
+.list .l_account .denglu{
+    color:#f56600;
+}
+
+.list .l_account .denglu:hover{
     color:#f56600;
 }
 .login-type-box .list .link{
@@ -112,12 +116,11 @@ body{
 .l_q_qrcode span{
     color:#ff6700;
 }
-.l_qrcode:hover a{
-    color:#f56600;
+
+.l_qrcode .saoma:hover{
+    color: #ff6700;
 }
-.l_qrcode:hover .l_q_qrcode{
-    display: block;
-}
+
 /*注册框中部*/
 form{
     width:410px;
@@ -212,21 +215,21 @@ form{
 }
 .l-links i{
     font-size: 30px;
-    color:#757575;
+
 }
 .l-links .icon-logo-wechat{
     font-size: 36px;
 }
-.icon-qq:hover{
+.icon-qq{
     color:#0288d1;
 }
-.icon-qunfengxinlangweibo:hover{
+.icon-qunfengxinlangweibo{
     color:#d32f2f;
 }
-.icon-zhifubao:hover{
+.icon-zhifubao{
     color:#00aaee;
 }
-.icon-logo-wechat:hover{
+.icon-logo-wechat{
     color:#00d20d;
 }
 .footer{

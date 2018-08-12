@@ -5,6 +5,45 @@
     <title>小米账号-登录</title>
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="iconfont/login/iconfont.css"/>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+
+            //点击按钮“账户登录”的效果
+            $(".l_account").click(function(){
+                $(".saoma").css({"color":"#757575"});
+                $(".denglu").css({"color":"#f56600"});
+                $("form").show();
+                $(".type-login").show();
+                $(".l-links").show();
+                $(".l_q_qrcode").hide();
+            });
+
+            //点击按钮“扫码登录”的效果
+            $(".saoma").click(function(){
+                $(".denglu").css({"color":"#757575"});//
+                $(".saoma").css({"color":"#f56600"});
+                $(".l_q_qrcode").show();//显示图片二维码
+                $("form").hide();
+                $(".type-login").hide();
+                $(".l-links").hide();
+            });
+
+            //文字控制效果
+
+
+
+
+
+            //移开效果
+
+        })
+
+
+
+    </script>
 </head>
 <body>
 <div class="header">
@@ -21,13 +60,13 @@
             <div class="login-type-box">
                 <ul class="list">
                     <li class="l_account">
-                        <a href="javascript:void(0)">帐号登录</a>
+                        <a href="javascript:void(0)" class="denglu">帐号登录</a>
                     </li>
                     <li class="link">
                         <span>|</span>
                     </li>
                     <li class="l_qrcode">
-                        <a href="javascript:void(0)">扫码登录</a>
+                        <a href="javascript:void(0)" class="saoma">扫码登录</a>
                         <div class="l_q_qrcode">
                             <img src="images/login/pic_qrcode.png"/>
                             <p>使用<span>小米商城APP</span>扫一扫<br/>
