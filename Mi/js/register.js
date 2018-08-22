@@ -44,7 +44,7 @@ function turePassword(){
     var userPassword2 = document.getElementById("p-t-text");//再次输入的密码
     var errPassword = document.getElementById("print-t-text");
     if(userPassword2.value!=userPassword.value){
-        errPassword.innerHTML="密码错误！";
+        errPassword.innerHTML="密码不一致！";
         errPassword.style.color="#ff6700";
         errPassword.className="error";
         return false;
