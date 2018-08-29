@@ -266,9 +266,15 @@ body{
     margin-top: 20px;
     float: left;
     box-sizing: border-box;
-    padding-left: 20px;
-    padding-top: 20px;
+    padding:17px 25px 0 25px;
     border: .6px solid #e0e0e0;
+    font-size:14px;
+}
+.a-content p{
+    height:20px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 6px;
 }
 .add-address{
     border-radius: 50%;
@@ -292,8 +298,31 @@ body{
 }
 
 
+.user{
+    font-size: 15px;
+    display: none;
+    margin-bottom: 6px;
+}
+.mobile{
+    display: none;
+}
 
+.city{
+    display: none;
+}
+.small_city{
+    display: none;
+}
+.query-address{
+    width:100%;
+    font-size: 15px;
+    display: none;
 
+}
+.d-query{
+    color: #ff6700;
+    float:right;
+}
 .goods{
     background-color: white;
     line-height: 26px;
@@ -1124,6 +1153,19 @@ s{
     left: 123px;
     top: 20px;
     border: 0 solid #ff6700;
+}
+.update{
+    width: 130px;
+    height: 35px;
+    font-size: 18px;
+    background-color: #ff6700;
+    /* border-color: #ff6700; */
+    color: #fff;
+    position: relative;
+    left: 123px;
+    top: 20px;
+    border: 0 solid #ff6700;
+    display:none;
 }
 /*取消*/
 .cancel{

@@ -4,64 +4,10 @@
     <meta charset="UTF-8">
     <title></title>
     <link href="css/order.css" rel="stylesheet" type="text/css">
-    <link href="iconfont/order/iconfont.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="iconfont/footer/iconfont.css">
     <!-- footer.css -->
     <link rel="stylesheet" type="text/css" href="css/footer.css">
-    <!--js-->
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/order.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/Popt.js"></script>
-    <script type="text/javascript" src="js/city.json.js"></script>
-    <script type="text/javascript" src="js/citySet.js"></script>
 
-
-    <style type="text/css">
-
-        .query-address{
-            font-size: 13px;
-
-            /* background-color: beige; */
-            width: 73px;
-            position: absolute;
-            /*left: 170px;
-            /!* bottom: -116px; *!/*/
-            left: 186px;
-            top: 135px;
-            display: none;
-
-        }
-
-        .query-address a:nth-child(1){
-            color: #ff6700;
-            margin-left: 10px;
-        }
-        .query-address a:nth-child(2){
-            color: #ff6700;
-        }
-        .user{
-            position: relative;
-            font-size: 15px;
-            display: none;
-        }
-        .mobile{
-            position: relative;
-            top: 10px;
-            display: none;
-        }
-
-        .city{
-            position: relative;
-            top: 13px;
-            display: none;
-        }
-        .small_city{
-            position: relative;
-            top: 16px;
-            display: none;
-        }
-    </style>
 
 </head>
 <body>
@@ -83,11 +29,13 @@
             <input class="address-point" type="text" placeholder="地址标签">
         </form>
         <div class="choose-box">
-            <input type="button" class="got" value="提交">
+            <input type="button" class="got" value="保存">
+            <input type="button" class="update" value="修改">
             <input type="button" class="cancel" value="取消">
         </div>
     </div>
 </div>
+
 <div class="header">
     <!-- top -->
     <div class="top">
@@ -118,6 +66,7 @@
     <!--End top-->
 </div>
 <!--End header-->
+
 <!--container-->
 <div class="container">
     <!--content-->
@@ -126,15 +75,14 @@
         <div class="all-address">
             <div class="a-title"><span>收货地址</span></div>
             <ul class="a-content">
-                <li class="one-address">
-                    <div class="add-address" onclick="Add()"><a href="javaScript:void(0)"><span>+</span></a></div>
-                    <h4 class="user">姓名</h4>
-                    <p class="mobile">15521</p>
-                    <p class="city">广东</p>
-                    <p class="small_city">惠州</p>
+                <li class="one-address info1">
+                    <div class="add-address"><a href="javaScript:void(0)"><span>+</span></a></div>
+                    <h4 class="user"></h4>
+                    <p class="mobile"></p>
+                    <p class="city"></p>
+                    <p class="small_city"></p>
                     <div class="query-address">
-                        <a href="javaScript:void(0)" class="d-delete">删除</a>
-                        <a href="javaScript:void(0)" class="d-query" onclick="QueryAddress()">修改</a>
+                        <a href="javaScript:void(0)" class="d-query">修改</a>
                     </div>
                 </li>
             </ul>
@@ -277,110 +225,12 @@
 <!-- footer:iconfont -->
 
 <!-- js -->
-<script type="text/javascript">
 
-    /*弹出地址填写框，赋值*/
-    function open(){
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/Popt.js"></script>
+<script type="text/javascript" src="js/city.json.js"></script>
+<script type="text/javascript" src="js/citySet.js"></script>
+<script type="text/javascript" src="js/order.js"></script>
 
-            var userName = $(this).parents("li").find(".user").val();/*用户名*/
-            var mobile = $(this).parents("li").find(".mobile").val();/*地址*/
-            var city = $(this).parents("li").find(".city").val();/*城市*/
-            var small_city = $(this).parents("li").find(".small_city").val();/*城镇*/
-            $(".address-box").show();
-            $(".userName").innerHTML=userName;
-            $(".user-mobile").innerHTML=mobile;
-            $("#city").innerHTML=city;
-            $(".user-address").innerHTML=small_city;
-
-    }
-
-    $(".clear").click(function(){/*关闭,信息清除*/
-        $(".user-name").val("");
-        $(".user-mobile").val("");
-        $("#city").val("");
-        $(".user-address").val("");
-        $(".ESM-number").val("");
-        $(".address-point").val("");
-        $(".address-box").hide();
-    });
-    /*取消，信息消除*/
-    $(".cancel").click(function(){
-        $(".user-name").val("");
-        $(".user-mobile").val("");
-        $("#city").val("");
-        $(".user-address").val("");
-        $(".ESM-number").val("");
-        $(".address-point").val("");
-        $(".address-box").hide();
-    });
-
-    function Add(){
-        open();
-
-        $(".got").click(function(){
-            /*增加一个框框*/
-            var str = '<li class="one-address">'+
-                    '<div class="add-address" onclick="Add()"><a href="javaScript:void(0)"><span>+</span></a></div>'+
-                    '<h4 class="user"></h4>'+
-                    '<p class="mobile"></p>'+
-                    '<p class="city"></p>'+
-                    '<p class="small_city"></p>'+
-                    '<div class="query-address">'+
-                    '<a href="javaScript:void(0)" class="d-delete"></a>'+
-                    '<a href="javaScript:void(0)" class="d-query"></a>'+
-                    '</div>'+
-                    '</li>';
-
-            $(".a-content").append(str);
-        });
-        $(".add-address").remove();
-    }
-
-    /*修改*/
-    function QueryAddress(){
-        gitcontent();
-    }
-
-    /*将弹出框内的内容赋值到地址列表里面*/
-    function gitcontent(){
-
-        /*将弹出框里面的值赋值回地址栏*/
-
-    }
-
-    /*确定以后，移交内容*/
-    $(".got").click(function(){
-         $(".user-name").val("");
-         $(".user-mobile").val("");
-         $("#city").val("");
-         $(".user-address").val("");
-        $(".add-address").hide("");
-        $(".address-box").hide("");
-    });
-
-
-    /*添加地址*/
-    $("#city").click(function (e) {
-        SelCity(this,e);
-    });
-    $("s").click(function (e) {
-        SelCity(document.getElementById("city"),e);
-    });
-
-    /*修改地址或者删除地址，需要对框进行点击*/
-    /*显示出来修改和删除*/
-
-    /*修改地址*/
-    /*删除地址*/
-    $(".d-delete").on("click",function(){
-        $(this).parent().parent().remove();
-    });
-
-
-    /*新生地址的添加和变化*/
-
-
-
-</script>
 </body>
 </html>
