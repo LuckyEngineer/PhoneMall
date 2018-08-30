@@ -88,7 +88,10 @@
             </ul>
         </div>
         <div style="clear:both;height: 15px"></div>
-        <span class="goods">商品清单</span>
+        <div class="describe">
+            <p class="d_list">商品清单</p>
+            <a href="cart.html" class="d_return">返回购物车></a>
+        </div>
         <div class="content_centre1">
             <span class="content_centre1_msg2">商品描述</span>
             <span class="content_centre1_msg3">单价</span>
@@ -98,34 +101,26 @@
         <ul class="content_centre">
             <!--商品信息-->
             <li class="content_centre2">
-
-                <div class="content_centre2_msg2">
-                    <a href="javascript:void(0)"><img src="images/cart/banner_centre2_pic.jpg"> </a>
-                </div>
-                <div class="content_centre2_msg3">
-                    <a href="javascript:void(0)">小米6 全网通版 4GB内存 亮黑色</a>
-                </div>
+                <img class="content_centre2_msg2" src="images/cart/banner_centre2_pic.jpg">
+                <p class="c_name">小米6 全网通版 4GB内存 亮黑色</p>
                 <!-- 商品单价 -->
-                <div class="content_centre2_msg4">
-                    <span class="content_price">2209</span><span>元</span>
-                </div>
+                <p class="c_money">2209<span class="content_price">元</span></p>
                 <!-- 商品数量 -->
-                <div class="content_goods">
-
-                    <input type="text" readonly="readonly" value="1" class="c_g_num">
-
-                </div>
+                <p class="c_number">1</p>
                 <!-- 小计 -->
-                <div class="content_centre2_msg6">
-                    <span class="content_subtotal">2290</span><span>元</span>
-                </div>
-
+                <p class="c_count">2290<span class="content_subtotal">元</span></p>
             </li>
         </ul>
         <!--计算总价-->
         <div class="calculate-money">
-            <span>总价是：</span><input type="text" class="money" readonly="readonly" value="300"><span class="yuan">元</span>
-            <button class="place-order">立即下单</button>
+            <div class="c_text">
+                <p class="c_m_t_info"></p>
+                <p class="c_m_t_address"></p>
+            </div>
+            <div class="c_right">
+                <p>总价是：<span class="c_r_price">300元</span></p>
+                <a href="javascript:void(0)" class="c_r_make">立即下单</a>
+            </div>
         </div>
     </div>
 </div>

@@ -108,6 +108,29 @@ function addModile(){
         $(".address-box").find(".input").val(city);
         $(".address-box").find(".user-address").val(small_city);
     });
+
+    //动态绑定选定收货地址附加到左下角事件
+    $(".one-address").on("click",function(){
+        //获取ul下的最后一个li元素
+        var last_element=$(this).parent().children("li:last-child").attr("class");
+        var present_element=$(this).attr("class");
+        //判断该元素是否为最后一个li元素
+        if(present_element!=last_element){
+            var str=$(this).attr("class");
+            //设置其他li标签的边框颜色不不产生变化
+            $(this).parent().children().css("border",".6px solid #e0e0e0");
+            $(this).css("border",".6px solid #ff6700");
+            //计算li的类名末尾的数字是从第几位开始，并取出字符串
+            index=str.substr(16-str.length);
+            var info=".info"+index;
+            var username=$(info).find(".user").html();
+            var mobile=$(info).find(".mobile").html();
+            var city=$(info).find(".city").html();
+            var detail_city=$(info).find(".small_city").html();
+            $(".c_m_t_info").html(username+"&nbsp;"+mobile);
+            $(".c_m_t_address").html(city+"&nbsp;"+detail_city);
+        }
+    });
 }
 
 //将信息传递回模块中
@@ -229,10 +252,7 @@ $(".d-query").click(function(){
     $(".address-box").find(".input").val(city);
     $(".address-box").find(".user-address").val(small_city);
 });
-//修改信息方法
-function update(){
 
-}
 
 /*添加地址*/
 $("#city").click(function (e) {
@@ -270,3 +290,25 @@ function checkPhone(){
         return true;
     }
 }
+
+//选定收货地址
+$(".one-address").click(function(){
+    //获取ul下的最后一个li元素
+    var last_element=$(this).parent().children("li:last-child").attr("class");
+    var present_element=$(this).attr("class");
+    //判断该元素是否为最后一个li元素
+    if(present_element!=last_element){
+        var str=$(this).attr("class");
+        $(this).parent().children().css("border",".6px solid #e0e0e0");
+        $(this).css("border",".6px solid #ff6700");
+        //计算li的类名末尾的数字是从第几位开始，并取出字符串
+        index=str.substr(16-str.length);
+        var info=".info"+index;
+        var username=$(info).find(".user").html();
+        var mobile=$(info).find(".mobile").html();
+        var city=$(info).find(".city").html();
+        var detail_city=$(info).find(".small_city").html();
+        $(".c_m_t_info").html(username+"&nbsp;"+mobile);
+        $(".c_m_t_address").html(city+"&nbsp;"+detail_city);
+    }
+});
